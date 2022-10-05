@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="game-window">
+        <div id="header">
+            <h1>TIC-TAC-TOE</h1>
+        </div>
+        <div id="players">
+            <div class="players__window">
+                <div>
+                    <label for="playerx">Player X:</label>
+                    <input type="text" name="playerx" id="playerx">
+                </div>
+                <div>
+                    <label for="playero">Player O:</label>
+                    <input type="text" name="playero" id="playero">
+                </div>
+            </div>
+            <div class="players__turn">
+                <output id="playerx">It's your turn!</output>
+                <output id="playero"></output>
+            </div>
+        </div>
+        <div id="board">
+            <div class="square1"></div>
+            <div class="square2"></div>
+            <div class="square3"></div>
+            <div class="square4"></div>
+            <div class="square5"></div>
+            <div class="square6"></div>
+            <div class="square7"></div>
+            <div class="square8"></div>
+            <div class="square9"></div>
+        </div>
+        <div id="menu">
+            <button id="ai-button">Man VS Machine</button>
+            <button id="new-game">New Game</button>
+        </div>
+        <div id="foooter">
+            <span class="git">
+                <a href="https://github.com/octavian-sn">
+                    <img src="github.png" alt="GitHub Logo" height="30px">
+                </a>
+            Created by Octavian Șulic © 2022 TheOdinProject
+            </span>
+        </div>
+    </div>
+</body>
+</html>

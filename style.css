@@ -1,0 +1,74 @@
+:root {
+    --one-color: #d5e1df;
+    --two-color: #e3eaa7;
+    --three-color: #b5e7a0;
+    --four-color: #86af49;
+    --black-color: rgb(19, 66, 5);
+}
+
+body {
+    background-color: var(--four-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#game-window {
+    width: 700px;
+    height: 100%;
+    background-color: var(--two-color);
+}
+
+#header,
+#players,
+#menu,
+#footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8%;
+}
+
+#header {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    margin-bottom: 0;
+    color: var(--black-color);
+}
+
+#board {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    margin-bottom: 8%;
+}
+
+#board div {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 8rem;
+    color: var(--four-color);
+    border: 1px solid var(--black-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--two-color);
+}
+
+/* Credits */
+.git {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    gap: 10px;
+    font-weight:500;
+    color: rgb(4, 39, 6);
+    margin-bottom: 16px;
+}
+
+.git>a:hover{
+    transform: rotate(360deg);
+    transition-duration: 0.5s;
+}
