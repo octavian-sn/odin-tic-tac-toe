@@ -3,7 +3,7 @@
     --two-color: #e3eaa7;
     --three-color: #b5e7a0;
     --four-color: #86af49;
-    --black-color: rgb(19, 66, 5);
+    --black-color: rgb(15, 53, 3);
 }
 
 body {
@@ -64,11 +64,6 @@ body {
     font-size: 0.9rem;
     gap: 10px;
     font-weight:500;
-    color: rgb(4, 39, 6);
+    color: var(--black-color);
     margin-bottom: 16px;
-}
-
-.git>a:hover{
-    transform: rotate(360deg);
-    transition-duration: 0.5s;
 }
