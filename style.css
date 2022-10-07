@@ -1,8 +1,8 @@
 :root {
     --one-color: #d5e1df;
-    --two-color: #e3eaa7;
+    --two-color: #e5ebb5;
     --three-color: #b5e7a0;
-    --four-color: #86af49;
+    --four-color: #96b36b;
     --black-color: rgb(15, 53, 3);
 }
 
@@ -53,6 +53,56 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--two-color);
+}
+
+#modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 10; 
+    background-color: var(--two-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 200px;
+    gap: 40px;
+    border-radius: 5px;
+}
+
+#modal__window {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+#modal__button {
+    width: 100px;
+
+}
+
+#modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+  
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;  
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
 }
 
 /* Credits */

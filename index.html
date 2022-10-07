@@ -19,15 +19,13 @@
                 <div>
                     <label for="X">Player X:</label>
                     <input type="text" name="playerx" id="X">
+                    <output id="playerx">It's your turn!</output>
                 </div>
                 <div>
                     <label for="O">Player O:</label>
                     <input type="text" name="playero" id="O">
+                    <output id="playero"></output>
                 </div>
-            </div>
-            <div class="players__turn">
-                <output id="playerx">It's your turn!</output>
-                <output id="playero"></output>
             </div>
         </div>
         <div id="board">
@@ -43,7 +41,7 @@
         </div>
         <div id="menu">
             <button id="ai-button">Man VS Machine</button>
-            <button id="new-game">New Game</button>
+            <button id="restart">Restart Game</button>
         </div>
         <div id="foooter">
             <span class="git">
@@ -53,6 +51,12 @@
             Created by Octavian Șulic © 2022 TheOdinProject
             </span>
         </div>
+        <div class="modal" id="modal">
+            <div id="modal__window">The winner is:
+            </div>
+            <button id="modal__button">New Game</button>
+        </div>
+        <div id="overlay"></div>
     </div>
 </body>
 </html>
