@@ -6,14 +6,15 @@ const player = (playerTag) => {
     return {symbol, name, score};
 };
 
-let PlayerX = player('X');
-let PlayerO = player('O');
-
 const board = (() => {
     let squares = Array.from(document.querySelectorAll('.square'));
-    let choices = [];
-    for (i = 0; i < squares.length; i++) {
-        choices.push('');
+    let choices = ['', '', '', '', '', '', '', '', '',];
+
+    const newBoard = function() {
+        for (i = 0; i < 9; i++) {
+            choices[i] = '';
+            squares[i].innerHTML = '';
+        }
     }
 
     squares.forEach(square => {
@@ -35,17 +36,21 @@ const board = (() => {
             } else {alert('Taken!')};
         })
     })
-
-    return {squares, choices};
+    
+    return {squares, choices, newBoard};
 })();
 
 const game = (() => {
     let turnOf = 'X';
     let message = `The winner is: Player${turnOf}`;
-
-    const winner = () => {
-
-    }
+    const button = document.getElementById('new-game');
+    button.addEventListener('click', () => {
+        board.newBoard()
+        PlayerX.score = 0;
+        PlayerO.score = 0;
+        game.turnOf = 'X';
+    });
+    
 
     const checkWinner = () => {
         // Horizontal rows
@@ -88,3 +93,6 @@ const game = (() => {
 
     return {turnOf, checkWinner};
 })();
+
+let PlayerX = player('X');
+let PlayerO = player('O');
