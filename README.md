@@ -14,4 +14,4 @@ Thank you TOP for not going easy on us!
 
 [Link to assignment](https://www.theodinproject.com/lessons/node-path-javascript-tic-tac-toe)
 
-[Link to project](https://octavian-sn.github.io/odin-library/)
+[Link to project](https://octavian-sn.github.io/odin-tic-tac-toe/)
