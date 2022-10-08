@@ -7,6 +7,7 @@ const player = (playerTag) => {
 };
 
 const board = (() => {
+    const gameBoard = document.getElementById('board');
     let squares = Array.from(document.querySelectorAll('.square'));
     let choices = ['', '', '', '', '', '', '', '', '',];
 
@@ -37,7 +38,7 @@ const board = (() => {
         })
     })
     
-    return {squares, choices, newBoard};
+    return {squares, choices, newBoard, gameBoard};
 })();
 
 let PlayerX = player('X');
@@ -54,6 +55,7 @@ const game = (() => {
         PlayerX.score = 0;
         PlayerO.score = 0;
         game.turnOf = 'X';
+        board.gameBoard.classList.remove('inactive');
     };
 
     // Change names of players
@@ -133,11 +135,11 @@ const modal = (() => {
 
     // Open pop-up
     function open() {
-        console.log(game.winner);
         modalMessage.innerHTML = game.winner;
         if (modal == null) return
         modal.classList.add('active')
         overlay.classList.add('active')
+        board.gameBoard.classList.add('inactive');
     }
     // Close pop-up
     function close() {

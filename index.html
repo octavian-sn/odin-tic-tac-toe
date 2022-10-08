@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Fredoka+One&family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -17,12 +17,12 @@
         <div id="players">
             <div class="players__window">
                 <div>
-                    <label for="X">Player X:</label>
+                    <label for="X">Player X :</label>
                     <input type="text" name="playerx" id="X">
-                    <output id="playerx">It's your turn!</output>
+                    <output id="playerx"></output>
                 </div>
                 <div>
-                    <label for="O">Player O:</label>
+                    <label for="O">Player O :</label>
                     <input type="text" name="playero" id="O">
                     <output id="playero"></output>
                 </div>
@@ -52,8 +52,7 @@
             </span>
         </div>
         <div class="modal" id="modal">
-            <div id="modal__window">The winner is:
-            </div>
+            <div id="modal__window"></div>
             <button id="modal__button">New Game</button>
         </div>
         <div id="overlay"></div>
